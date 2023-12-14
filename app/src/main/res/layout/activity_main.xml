@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- O elemento raiz é um ScrollView -->
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <!-- RelativeLayout é usado como o layout principal -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        tools:context=".MainActivity">
+
+        <!-- ImageView com ID 'nota' -->
+        <ImageView
+            android:id="@+id/nota"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="30dp"
+            android:src="@drawable/duda" />
+
+        <!-- Segundo RelativeLayout chamado 'Container2' -->
+        <RelativeLayout
+            android:id="@+id/Container2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black"
+            android:layout_below="@+id/nota"
+            android:layout_marginTop="30dp">
+
+            <!-- ImageView para executar som com ID 'executarSom' -->
+            <ImageView
+                android:id="@+id/executarSom"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_play"
+                android:layout_margin="10dp"/>
+
+            <!-- TextView para o nome da música -->
+            <TextView
+                android:id="@+id/nome_musica"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="20dp"
+                android:layout_toEndOf="@+id/executarSom"
+                android:layout_toRightOf="@+id/executarSom"
+                android:text="@string/musica"
+                android:textColor="@android:color/white"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <!-- ImageView para parar a música com ID 'parar_musica' -->
+            <ImageView
+                android:id="@+id/parar_musica"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_stop"
+                android:layout_toRightOf="@id/nome_musica"
+                android:layout_margin="10dp"/>
+
+            <!-- View separadora -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/white"
+                android:layout_below="@id/executarSom"
+                android:layout_marginTop="8dp" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+</ScrollView>
