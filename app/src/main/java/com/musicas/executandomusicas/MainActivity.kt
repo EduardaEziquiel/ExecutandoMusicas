@@ -7,7 +7,7 @@ import android.widget.ImageView
 
 class MainActivity : AppCompatActivity() {
 
-    // Declarando variáveis globais para os elementos da interface e o MediaPlayer
+    // Declarando variáveis globais para os elementos da interface e o MediaPlayer --
     private lateinit var executarSom: ImageView
     private var mediaPlayer = MediaPlayer()
 
